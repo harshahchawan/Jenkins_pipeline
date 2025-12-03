@@ -1,1 +1,26 @@
 
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World1'
+                sleep(time: 10, unit: 'SECONDS')
+            }
+        }
+        stage('Hello2') {
+            steps {
+                echo 'Hello World2'
+                sleep(time: 10, unit: 'SECONDS')
+                error('Stopping pipeline intentionally')
+            }
+        }
+        stage('Hello3') {
+            steps {
+                echo 'Hello World3'
+            }
+        }
+    }
+}

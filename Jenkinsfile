@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Hello World2 jenkins2'
                 sleep(time: 10, unit: 'SECONDS')
-                error('Stopping pipeline intentionally')
+             
             }
         }
         stage('Hello3') {

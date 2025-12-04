@@ -1,22 +1,22 @@
 pipeline {
-    // We’ll choose an agent per stage
     agent none
 
     stages {
+
         stage('service1') {
-            agent { label 'Built-In Node' }       // controller
+            agent { label 'built-in' }   // Fix label
             steps {
                 echo 'Hello World1 this is jenkins'
-                bat 'cd'                          // show current directory
-                bat 'dir'                         // list files
+                bat 'cd'
+                bat 'dir'
             }
         }
 
         stage('service2') {
-            agent { label 'server_node_101' }     // your Windows server node
+            agent { label 'server_node_101' }
             steps {
                 echo 'Hello World2 jenkins2'
-                bat 'cd'                          // show current directory
+                bat 'cd'
                 bat 'dir'
             }
         }

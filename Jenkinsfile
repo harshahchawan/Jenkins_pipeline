@@ -4,10 +4,11 @@ pipeline {
     stages {
 
         stage('checkout') {
-           
-            agent { label 'built-in' }   // Fix label
+            agent { label 'Built-In Node' }
             steps {
-                git branch: 'main', credentialsId: 'git_jenkins', url: 'https://github.com/harshahchawan/Jenkins_pipeline''
+                git branch: 'main',
+                    credentialsId: 'git_jenkins',
+                    url: 'https://github.com/harshahchawan/Jenkins_pipeline'
             }
         }
 

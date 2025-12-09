@@ -6,7 +6,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'git_jenkins',
-                    url: 'https://github.com/harshahchawan/Jenkins_pipeline'
+                    url: 'https://github.com/harshahchawan/OppsPillers'
             }
         }
     }  // <- Missing this

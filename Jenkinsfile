@@ -9,5 +9,5 @@ pipeline {
                     url: 'https://github.com/harshahchawan/OppsPillers'
             }
         }
-    }  // <- Missing this
-} 
+    }
+}

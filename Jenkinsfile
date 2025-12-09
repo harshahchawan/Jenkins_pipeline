@@ -4,7 +4,7 @@ pipeline {
     stages {
 
         stage('checkout') {
-            agent Built-In Node
+           
             agent { label 'built-in' }   // Fix label
             steps {
                 git branch: 'main', credentialsId: 'git_jenkins', url: 'https://github.com/harshahchawan/Jenkins_pipeline''
